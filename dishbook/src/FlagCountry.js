@@ -25,8 +25,8 @@ const FlagCountry = (props) =>{
         
     return(
             <div className = "countryImages">
-                <img className = "flagImages" alt = {listOfCountries} src = {listOfCountries.flag} /> */}
-                {/* {listOfCountries}
+                {/* <img className = "flagImages" alt = {listOfCountries} src = {listOfCountries.flag} /> */} */}
+                {/* {theListOfCountry} */}
             </div>
     );
 
