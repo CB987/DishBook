@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import YumWorld from './YumWorld';
+import RecipePage from './RecipePage';
 
 
 class App extends Component {
@@ -8,7 +9,8 @@ class App extends Component {
     render() {
         return (
             <div>
-                <YumWorld />
+                {/* <YumWorld /> */}
+                <RecipePage />
             </div>
         );
     }

@@ -5,6 +5,7 @@ import {
 } from 'react-router-dom';
 import FlagCountry from './FlagCountry';
 import ListOfRecipes from './ListOfRecipes';
+// import RecipePage from './RecipePage';
 
 import Canada from './images/canada-country.png';
 import China from './images/china-country.png';
@@ -17,6 +18,7 @@ import Morocco from './images/morocco.png';
 import Spain from './images/spain.png';
 import Thailand from './images/thailand.png';
 import Vietnam from './images/vietnam.png';
+import UnitedStates from './images/UnitedStates.jpg';
 
 
 class YumWorld extends Component {
@@ -89,6 +91,12 @@ class YumWorld extends Component {
                     flag: Vietnam,
                     recipe: [],
                     nationality: 'Vietnamese'
+                },
+                {
+                    country: 'UnitedStates',
+                    flag: UnitedStates,
+                    recipe: [],
+                    nationality: 'American'
                 }
             ]
 
@@ -113,6 +121,8 @@ class YumWorld extends Component {
                         return (<ListOfRecipes nationality={this.state.countries} {...props}/>)
                     }}
                     />
+                    }} />
+                    {/* <RecipePage />    */}
                 </div>
             </Router> 
         );
