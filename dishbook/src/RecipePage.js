@@ -21,7 +21,7 @@ class RecipePage extends React.Component {
     }
 
     componentDidMount() {
-        const id = 52956
+        // const id = 52956
         fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`)
             .then(results => {
                 return results.json();
