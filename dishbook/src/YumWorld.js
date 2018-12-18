@@ -121,7 +121,7 @@ class YumWorld extends Component {
                         return (<ListOfRecipes nationality={this.state.countries} {...props}/>)
                     }}
                     />
-                    }} />
+                
                     {/* <RecipePage />    */}
                 </div>
             </Router> 

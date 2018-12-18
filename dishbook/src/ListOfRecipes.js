@@ -14,6 +14,7 @@ class ListOfRecipes extends Component {
     componentDidMount() {
         const countryName = this.props.match.params.country;
         // console.log(countryName)
+        console.log(this.props)
 
         // const country = this.props;
         // console.log(country)
@@ -35,16 +36,19 @@ class ListOfRecipes extends Component {
         
       }
         render () {
-            
             const countryName = this.props.match.params.country;
-        const listOfRecipes = this.state.recipes.map(recipe => {
-            return( <li>
-                <Link to = {`/${countryName}/${recipe.strMeal}`}>
-                   {recipe.strMeal}
-                </Link>
-                </li>
-            )
-        })
+            const listOfRecipes = this.state.recipes.map(recipe => {
+                return( 
+                    <div>
+                    <Link to = {`/${countryName}/${recipe.strMeal}`}>
+                    {/* {recipe.strMeal} */}
+                  
+                
+                    <img className="foodImages" src={recipe.strMealThumb} />
+                    </Link>
+                    </div>
+                )
+            })
         // return listOfRecipes;
             return(
                 <div>
