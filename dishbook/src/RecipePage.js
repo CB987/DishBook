@@ -1,5 +1,7 @@
 import React from 'react';
 
+import MeasurementList from './MeasurementList';
+
 class RecipePage extends React.Component {
     constructor(props) {
         super(props);
@@ -17,8 +19,8 @@ class RecipePage extends React.Component {
     }
 
     componentDidMount() {
-
-        fetch('https://www.themealdb.com/api/json/v1/1/lookup.php?i=52906')
+        const id = 52956
+        fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`)
             .then(results => {
                 return results.json();
             }).then(data => {
@@ -51,7 +53,28 @@ class RecipePage extends React.Component {
                     ],
                     measurements: [
                         data.meals[0].strMeasure1,
-                    ]
+                        data.meals[0].strMeasure2,
+                        data.meals[0].strMeasure3,
+                        data.meals[0].strMeasure4,
+                        data.meals[0].strMeasure5,
+                        data.meals[0].strMeasure6,
+                        data.meals[0].strMeasure7,
+                        data.meals[0].strMeasure8,
+                        data.meals[0].strMeasure9,
+                        data.meals[0].strMeasure10,
+                        data.meals[0].strMeasure11,
+                        data.meals[0].strMeasure12,
+                        data.meals[0].strMeasure13,
+                        data.meals[0].strMeasure14,
+                        data.meals[0].strMeasure15,
+                        data.meals[0].strMeasure16,
+                        data.meals[0].strMeasure17,
+                        data.meals[0].strMeasure18,
+                        data.meals[0].strMeasure19,
+                        data.meals[0].strMeasure20,
+                    ],
+                    instructions: data.meals[0].strInstructions,
+                    sourceURL: data.meals[0].strSource
                 })
 
 
@@ -70,23 +93,30 @@ class RecipePage extends React.Component {
 
                 <h1>{this.state.recipeTitle}</h1>
 
-                <button>like</button>
+                <button>likes</button>
                 <p>{this.state.count}</p>
 
-                <button>dislike</button>
+                <button>dislikes</button>
                 <p>{this.state.count}</p>
 
-                <ul>
-                    <li>{this.state.measurements}</li>
-                </ul>
-                <ul>
-                    <li>{this.state.ingredients}</li>
-                </ul>
+                <MeasurementList
+                    const food={this.state.ingredients}
+                    const amount={this.state.measurements}
+                />
+
                 <p>{this.state.instructions}</p>
-                <p>{this.state.sourceURL}</p>
+                <p>Original recipe from: {this.state.sourceURL}</p>
             </div>
         )
     }
+
+    // _getFilteredResults = () => {
+    //     if (this.state.ingredients = )
+    // }
+
+
 }
+
+
 
 export default RecipePage;
