@@ -36,7 +36,7 @@ class YumWorld extends Component {
                     nationality: 'Chinese'
                 },
                 {
-                    country: 'United_Kingdom',
+                    country: 'UnitedKingdom',
                     flag: England,
                     recipe: [],
                     nationality: 'British'
