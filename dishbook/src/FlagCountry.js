@@ -8,13 +8,18 @@ const FlagCountry = (props) =>{
     const theListOfCountry = arrayOfList.map((country) =>{
         const theCountry = country.country;
         const theFlag = country.flag;
+        const theNationality = country.nationality;
+        const recipeList = country.recipe;
+
+
     
         return(
-            <Link to = {`/${theCountry}`}>
+            <Link to = {`/${theNationality}`}>
                 <img className = "flagImages" alt = {theCountry} src = {theFlag}/>
             </Link>         
         )
     });
+
 
     return(
             <div className = "countryImages">
