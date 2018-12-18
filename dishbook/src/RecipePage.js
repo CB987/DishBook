@@ -1,6 +1,7 @@
 import React from 'react';
 
 import MeasurementList from './MeasurementList';
+import Counters from './Counters';
 
 class RecipePage extends React.Component {
     constructor(props) {
@@ -14,7 +15,8 @@ class RecipePage extends React.Component {
             ingredients: [],
             measurements: [],
             instructions: "",
-            sourceURL: ""
+            sourceURL: "",
+            didClick: false,
         };
     }
 
@@ -82,23 +84,23 @@ class RecipePage extends React.Component {
     }
 
 
-
-
-
-
     render() {
         return (
             <div>
-                <img src={this.state.recipeImage} alt={this.state.recipeTitle} />
+                <div className="recipe-header">
+                    <img className="flagImages" src={this.state.recipeImage} alt={this.state.recipeTitle} />
 
-                <h1>{this.state.recipeTitle}</h1>
+                    <div className="title-likes">
+                        <h1>{this.state.recipeTitle}</h1>
 
-                <button>likes</button>
-                <p>{this.state.count}</p>
-
-                <button>dislikes</button>
-                <p>{this.state.count}</p>
-
+                        <Counters
+                            _LikeMe={this._handleLike}
+                            likes={this.state.likes}
+                            _DislikeMe={this._handleUnlike}
+                            unlikes={this.state.unlikes}
+                        />
+                    </div>
+                </div>
                 <MeasurementList
                     const food={this.state.ingredients}
                     const amount={this.state.measurements}
@@ -106,16 +108,26 @@ class RecipePage extends React.Component {
 
                 <p>{this.state.instructions}</p>
                 <p>Original recipe from: {this.state.sourceURL}</p>
-            </div>
+            </div >
         )
+    };
+
+    _handleLike = () => {
+        // let likeCounter = { this.state.likes };
+        this.setState({
+            likes: this.state.likes + 1
+        })
     }
 
-    // _getFilteredResults = () => {
-    //     if (this.state.ingredients = )
-    // }
+    _handleUnlike = () => {
+        this.setState({
+            unlikes: this.state.unlikes - 1
+        })
+    }
 
+    _DislikeButton
+};
 
-}
 
 
 
