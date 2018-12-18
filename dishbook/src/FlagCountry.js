@@ -1,11 +1,13 @@
 import React from 'react';
 // import { Link } from 'react-router-dom';
+import cookbook from './images/cookbook.jpg';
+import index from './stylesheet/index.css';
 
 
 const FlagCountry = () =>{
     return(
         <div className = "countryImages">
-            <img alt = "Usa"></img>
+            <img className = "flagImages" alt = "Usa" src={cookbook}></img>
             <br/>
             <img alt = "Iceland"></img>
             <br/>
