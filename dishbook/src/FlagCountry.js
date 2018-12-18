@@ -1,33 +1,47 @@
 import React from 'react';
 // import { Link } from 'react-router-dom';
-import cookbook from './images/cookbook.jpg';
 import index from './stylesheet/index.css';
 
 
-const FlagCountry = () =>{
+const FlagCountry = (props) =>{
+    const theList = props.countryFlags;
+    // console.log(props.countryFlags.Canada.flag);
+    // const listOfCountries = Object.keys(props.countryFlags);
+    // console.log(listOfCountries);
+
+    // const listOfFlags = listOfCountries.map((theCountry) =>{
+    //     return props.countryFlags.theCountry.flag
+    // })
+    // console.log(listOfFlags);
+
+    // return(
+    //     <div className = "countryImages">
+    //         <img className = "flagImages" alt = {listOfCountries} src = {listOfCountries.flag} />
+    //     </div>
+    // );
     return(
         <div className = "countryImages">
-            <img className = "flagImages" alt = "Usa" src={cookbook}></img>
+            <img className = "flagImages" alt = "Canada" src = {theList.Canada.flag} />
             <br/>
-            <img alt = "Iceland"></img>
+            <img className = "flagImages" alt = "China" src = {theList.China.flag} />
             <br/>
-            <img alt = "Greenland"></img>
+            <img className = "flagImages" alt = "United Kingdom" src = {theList.United_Kingdom.flag} />
             <br/>
-            <img alt = "Germany"></img>
+            <img className = "flagImages" alt = "France" src = {theList.France.flag} />
             <br/>
-            <img alt = "Italy"></img>
+            <img className = "flagImages" alt = "India" src = {theList.India.flag} />
             <br/>
-            <img alt = "China"></img>
+            <img className = "flagImages" alt = "Japan" src = {theList.Japan.flag} />
             <br/>
-            <img alt = "Japan"></img>
+            <img className = "flagImages" alt = "Mexico" src = {theList.Mexico.flag} />
             <br/>
-            <img alt = "Peru"></img>
+            <img className = "flagImages" alt = "Morocco" src = {theList.Morocco.flag} />
             <br/>
-            <img alt = "Canada"></img>
+            <img className = "flagImages" alt = "Spain" src = {theList.Spain.flag} />
             <br/>
-            <img alt = "Mexico"></img>
+            <img className = "flagImages" alt = "Thailand" src = {theList.Thailand.flag} />
             <br/>
-            <img alt = "Greece"></img>
+            <img className = "flagImages" alt = "Vietnam" src = {theList.Vietnam.flag} />
         </div>
     );
 }
