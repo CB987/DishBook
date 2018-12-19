@@ -29,7 +29,7 @@ const FlagCountry = (props) => {
     return(
         <div className = "countryImages">
             <div className="country-title-container">
-                <h1>YumWorld!!!</h1>
+                <h1>Dishbook!!!</h1>
                 <h2>Where would you like to eat?</h2>
             </div>
             <div className="country-image-container">
