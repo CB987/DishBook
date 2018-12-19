@@ -45,11 +45,11 @@ h4 {
 
 .country-images {
     /* display: flex; */
-    outline: 1px solid yellow;
+    /* outline: 1px solid yellow; */
 }
 
 figure {
-    outline: 1px solid green;
+    /* outline: 1px solid green; */
     text-align: center;
     width: 150px;
 }
@@ -57,7 +57,7 @@ figure {
 .flagImages {
     width: auto;
     height: 150px;
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
     /* display: inline-block; */
 }
 
@@ -65,7 +65,7 @@ figcaption{
     /* text-decoration-style: none; */
     font-size: 15px;
     display: inline-block;
-    outline: 1px solid orange;
+    /* outline: 1px solid orange; */
     color: #752513;
 }
 
@@ -78,7 +78,7 @@ figcaption{
 =================*/
 .ingredients-container {
     display: flex;
-    outline: 1px solid green;
+    /* outline: 1px solid green; */
 }
 
 .recipe-header {
