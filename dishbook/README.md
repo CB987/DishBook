@@ -1,5 +1,5 @@
 <h1>Dishbook</h1>
-<p>Dishbook is an incredible experience of international dining. Upon choosing the cuisine of the </p>
+<p>Dishbook is an incredible experience of international dining. Upon choosing the kind of cuisine upon which they would like to dine, users are presented with several options of dishes native to that country, and then they can look at the recipe for each dish. They can also give each recipe a "like" or "dislike" reaction.</p>
 
 <h3>MVP</h3>
 <ul>
