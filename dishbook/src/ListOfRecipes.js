@@ -16,18 +16,23 @@ class ListOfRecipes extends Component {
             .then(recipe => {
                 this.setState({
                     recipes: recipe.meals
-            });
-        })
+                });
+            })
     }
 
     render() {
         const countryName = this.props.match.params.country;
         const listOfRecipes = this.state.recipes.map(recipe => {
             const id = recipe.idMeal
-            return( 
+            return (
                 <div>
-                    <Link to = {`/${countryName}/${recipe.strMeal}/${id}`}>
-                        <img className="foodImages" src={recipe.strMealThumb} />
+                    <Link to={`/${countryName}/${recipe.strMeal}/${id}`}>
+                        <figure>
+                            <img className="foodImages" src={recipe.strMealThumb} alt={recipe.strMealThumb} />
+                            <figcaption>
+                                {recipe.strMeal}
+                            </figcaption>
+                        </figure>
                     </Link>
                 </div>
             )
