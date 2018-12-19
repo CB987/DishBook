@@ -77,7 +77,7 @@ figcaption{
 .title-likes {
     padding-left: 5px;
     outline: 1px solid blue;
-} */
+} 
 
 .ingredients-container {
     display: flex;
@@ -212,13 +212,4 @@ figcaption{
 
 .recipe-header {
     outline: 1px solid red;
-}
-
-.instructions {
-    width: 50%;
-    margin-left: 15px;
-}
-
-.website-link {
-    margin-left: 15px;
 }
