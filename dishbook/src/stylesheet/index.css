@@ -23,6 +23,7 @@ body {
 li {
     list-style: none;
 }
+
 /*=================
 == FLAG PAGE
 =================*/
@@ -44,6 +45,7 @@ figcaption{
     color: #752513;
 }
 
+<<<<<<< HEAD
 /*=================
 == RECIPE LIST
 =================*/
@@ -85,6 +87,8 @@ figcaption{
 /* Flag Page */
 /* ============ */
 /* Start of styles april */
+=======
+>>>>>>> 902da43c751e9bda54e496e35eb681f9b18cddde
 .countryImages {
     display: flex;
     flex-direction: column;
@@ -195,9 +199,34 @@ figcaption{
 }
 
 
-/* =============== */
-/* Ingrediant Page */
-/* =============== */
+/* ================ */
+/* INGREDIENT PAGE */
+/* ================ */
+.ingredients-container {
+    display: flex;
+}
+
+.recipe-header {
+    display: flex;
+}
+
+.recipe-header img {
+    width: 150px;
+    margin: 15px;
+}
+
+.title-likes {
+    padding-left: 5px;
+    /* outline: 1px solid blue; */
+} */
+
+.ingredients-list {
+    margin-left: 15px;
+}
+
+.full-recipe-text {
+    margin-left: 15px;
+}
 
 .recipe-header {
     margin-top: 20px;
