@@ -119,8 +119,3 @@ class RecipePage extends React.Component {
         })
     };
 };
-
-
-
-
-export default RecipePage;
