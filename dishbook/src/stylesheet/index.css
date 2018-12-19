@@ -16,8 +16,6 @@ body {
     height: 100%;
     font-family: 'Hind', sans-serif;
     background: rgb(248, 246, 236);
-    font-family: 'Paytone One', sans-serif;
-    font-family: 'Source Sans Pro', sans-serif;
     color: #752513;
     }
 
@@ -214,4 +212,13 @@ figcaption{
 
 .recipe-header {
     outline: 1px solid red;
+}
+
+.instructions {
+    width: 50%;
+    margin-left: 15px;
+}
+
+.website-link {
+    margin-left: 15px;
 }
