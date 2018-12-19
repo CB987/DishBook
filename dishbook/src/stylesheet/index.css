@@ -210,7 +210,7 @@ figcaption{
 }
 
 .instructions {
-    width: 50%;
+    width: 68%;
     margin-left: 15px;
 }
 
@@ -240,4 +240,9 @@ figcaption{
 
 .website-link {
     margin-left: 15px;
+}
+
+.website-link a {
+    color: rgba(117, 37, 19, .9);
+    text-decoration: none;
 }
