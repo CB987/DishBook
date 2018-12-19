@@ -10,8 +10,8 @@ class RecipePage extends React.Component {
             id: "",
             recipeImage: "",
             recipeTitle: "",
-            likes: 0,
-            unlikes: 0,
+            likes: parseInt((Math.random() * (100)).toFixed(0)),
+            unlikes: parseInt((Math.random() * (-100)).toFixed(0)),
             ingredients: [],
             measurements: [],
             instructions: "",
@@ -26,7 +26,7 @@ class RecipePage extends React.Component {
                 return results.json();
             })
             .then(data => {
-                console.log(data)
+                // console.log(data)
                 this.setState({
                     id: data.meals[0].idMeal,
                     recipeImage: data.meals[0].strMealThumb,
@@ -109,15 +109,16 @@ class RecipePage extends React.Component {
 
     _handleLike = () => {
         this.setState({
-            likes: this.state.likes + 1
+            likes: (this.state.likes + 1)
         })
     };
 
     _handleUnlike = () => {
         this.setState({
-            unlikes: this.state.unlikes - 1
+            unlikes: (this.state.unlikes - 1)
         })
     };
 };
+
 
 export default RecipePage;
