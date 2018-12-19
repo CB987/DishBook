@@ -16,7 +16,13 @@ const FlagCountry = (props) =>{
         return(
             <Link to = {`/${theNationality}`}>
                 <div className="images">
-                        <img className = "flagImages" alt = {theCountry} src = {theFlag}/>
+                        {/* <img className = "flagImages" alt = {theCountry} src = {theFlag}/> */}
+                    <figure>
+                        <img className="flagImages" alt={theCountry} src={theFlag} />
+                        <figcaption>
+                            {theCountry}
+                        </figcaption>
+                    </figure>
                 </div>
             </Link>         
         )
