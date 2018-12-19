@@ -1,0 +1,171 @@
+
+@import url('https://fonts.googleapis.com/css?family=Hind|Luckiest+Guy');
+/* font-family: 'Luckiest Guy', cursive;
+font-family: 'Hind', sans-serif; */
+
+* {
+    /* outline: 1px solid red; */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    font-family: 'Hind', sans-serif;
+    }
+
+li {
+    list-style: none;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background: rgb(248, 246, 236);
+    font-family: 'Paytone One', sans-serif;
+    /* font-family: 'Source Sans Pro', sans-serif; */
+}
+
+/*=================
+== FLAG PAGE
+=================*/
+h1 {
+    color: #752513;
+    font-size: 30px;
+}
+
+h4 {
+    color: #752513;
+}
+
+.country-images {
+    /* display: flex; */
+    /* outline: 1px solid yellow; */
+}
+
+figure {
+    /* outline: 1px solid green; */
+    text-align: center;
+    width: 150px;
+}
+
+.flagImages {
+    width: auto;
+    height: 150px;
+    /* outline: 1px solid red; */
+    /* display: inline-block; */
+}
+
+figcaption{
+    /* text-decoration-style: none; */
+    font-size: 15px;
+    display: inline-block;
+    /* outline: 1px solid orange; */
+    color: #752513;
+}
+
+/*=================
+== RECIPE LIST
+=================*/
+
+/*=================
+== RECIPE PAGE
+=================*/
+.ingredients-container {
+    display: flex;
+    /* outline: 1px solid green; */
+}
+
+.recipe-header {
+    display: flex;
+}
+
+.recipe-header img {
+    width: 150px;
+    /* height: auto; */
+}
+
+.title-likes {
+    padding-left: 5px;
+    /* outline: 1px solid blue; */
+}
+
+.foodImages {
+    width: 200px;
+    height: 200px;
+}
+
+
+
+
+
+
+
+
+/* Start of styles april */
+.countryImages {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.country-title-container {
+    /* outline: 1px solid blue; */
+    margin: 40px auto 30px auto;
+    padding: 30px;
+    text-align: center;
+}
+
+/* .country-title-container h1,
+.country-title-container h2 {
+    margin: auto;
+} */
+
+.country-title-container h1 {
+    padding-bottom: 30px;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 4.3rem;
+    letter-spacing: 7px;
+}
+
+.country-title-container h2 {
+    font-size: 1.7rem;
+    letter-spacing: 2px;
+}
+
+/* div hugging all divs of images  */
+.country-image-container  {
+    display: flex;
+    flex-wrap: wrap;
+    width: 53%;
+    height: 100%;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    /* outline: 3px solid green; */
+    padding: 10px 20px; 
+}
+
+/* div hugging each individual image */
+.images {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    /* outline: 1px solid blue; */
+    padding: 30px;
+}
+
+ /* img itself */
+.flagImages {
+    min-height: 150px;
+    min-width: 150px;
+    max-height: 150px;
+    max-width: 150px;
+}
+

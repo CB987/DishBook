@@ -1,32 +1,42 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import index from './stylesheet/index.css';
 
 
-const FlagCountry = () =>{
+const FlagCountry = (props) => {
+    const arrayOfList = props.countryFlags
+    const theListOfCountry = arrayOfList.map((country) => {
+        const theCountry = country.country;
+        const theFlag = country.flag;
+        const theNationality = country.nationality;
+        const recipeList = country.recipe;
+
+
+return(
+            <Link to = {`/${theNationality}`}>
+                <div className="images">
+                        {/* <img className = "flagImages" alt = {theCountry} src = {theFlag}/> */}
+                    <figure>
+                        <img className="flagImages" alt={theCountry} src={theFlag} />
+                        <figcaption>
+                            {theCountry}
+                        </figcaption>
+                    </figure>
+                </div>
+            </Link>         
+        )
+    });
+
     return(
-        <div className = "countryImages">
-            <img alt = "Usa"></img>
-            <br/>
-            <img alt = "Iceland"></img>
-            <br/>
-            <img alt = "Greenland"></img>
-            <br/>
-            <img alt = "Germany"></img>
-            <br/>
-            <img alt = "Italy"></img>
-            <br/>
-            <img alt = "China"></img>
-            <br/>
-            <img alt = "Japan"></img>
-            <br/>
-            <img alt = "Peru"></img>
-            <br/>
-            <img alt = "Canada"></img>
-            <br/>
-            <img alt = "Mexico"></img>
-            <br/>
-            <img alt = "Greece"></img>
-        </div>
+            <div className = "countryImages">
+                <div className="country-title-container">
+                    <h1>YumWorld!!!</h1>
+                    <h2>Where would you like to eat?</h2>
+                </div>
+                <div className="country-image-container">
+                    {theListOfCountry}
+                </div>
+            </div>
     );
 }
 
