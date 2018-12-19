@@ -3,25 +3,29 @@ import { Link } from 'react-router-dom';
 import index from './stylesheet/index.css';
 
 
-const FlagCountry = (props) =>{
+const FlagCountry = (props) => {
     const arrayOfList = props.countryFlags
-    const theListOfCountry = arrayOfList.map((country) =>{
+    const theListOfCountry = arrayOfList.map((country) => {
         const theCountry = country.country;
         const theFlag = country.flag;
         const theNationality = country.nationality;
         const recipeList = country.recipe;
 
 
-    
-        return(
+return(
             <Link to = {`/${theNationality}`}>
                 <div className="images">
-                        <img className = "flagImages" alt = {theCountry} src = {theFlag}/>
+                        {/* <img className = "flagImages" alt = {theCountry} src = {theFlag}/> */}
+                    <figure>
+                        <img className="flagImages" alt={theCountry} src={theFlag} />
+                        <figcaption>
+                            {theCountry}
+                        </figcaption>
+                    </figure>
                 </div>
             </Link>         
         )
     });
-
 
     return(
             <div className = "countryImages">
