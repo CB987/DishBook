@@ -107,8 +107,6 @@ class YumWorld extends Component {
         return (
             <Router>
                 <div>
-                    <h1>Welcome</h1>
-                    <h2>Pick Now</h2>
                     <Route path = "/" exact render = {(props) =>{
                         return(
                             <FlagCountry 

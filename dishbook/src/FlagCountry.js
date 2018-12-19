@@ -15,7 +15,9 @@ const FlagCountry = (props) =>{
     
         return(
             <Link to = {`/${theNationality}`}>
-                <img className = "flagImages" alt = {theCountry} src = {theFlag}/>
+                <div className="images">
+                        <img className = "flagImages" alt = {theCountry} src = {theFlag}/>
+                </div>
             </Link>         
         )
     });
@@ -23,7 +25,13 @@ const FlagCountry = (props) =>{
 
     return(
             <div className = "countryImages">
-                {theListOfCountry}
+                <div className="country-title-container">
+                    <h1>YumWorld!!!</h1>
+                    <h2>Where would you like to eat?</h2>
+                </div>
+                <div className="country-image-container">
+                    {theListOfCountry}
+                </div>
             </div>
     );
 }
