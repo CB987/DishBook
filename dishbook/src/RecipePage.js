@@ -1,13 +1,13 @@
 import React from 'react';
 
-import MeasurementList from './MeasurementList';
+import Instructions from './Instructions';
 import Counters from './Counters';
 
 class RecipePage extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            key: "",
+            id: "",
             recipeImage: "",
             recipeTitle: "",
             likes: 0,
@@ -15,20 +15,20 @@ class RecipePage extends React.Component {
             ingredients: [],
             measurements: [],
             instructions: "",
-            sourceURL: "",
-            didClick: false,
+            sourceURL: ""
         };
     }
 
     componentDidMount() {
-        // const id = 52956
+        const id = this.props.match.params.id
         fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${id}`)
             .then(results => {
                 return results.json();
-            }).then(data => {
+            })
+            .then(data => {
                 console.log(data)
                 this.setState({
-                    key: data.meals[0].idMeal,
+                    id: data.meals[0].idMeal,
                     recipeImage: data.meals[0].strMealThumb,
                     recipeTitle: data.meals[0].strMeal,
                     ingredients: [
@@ -78,21 +78,16 @@ class RecipePage extends React.Component {
                     instructions: data.meals[0].strInstructions,
                     sourceURL: data.meals[0].strSource
                 })
-
-
             })
-    }
-
+    };
 
     render() {
         return (
             <div>
                 <div className="recipe-header">
                     <img className="flagImages" src={this.state.recipeImage} alt={this.state.recipeTitle} />
-
-                    <div className="title-likes">
+                    <div className="title-likes">   
                         <h1>{this.state.recipeTitle}</h1>
-
                         <Counters
                             _LikeMe={this._handleLike}
                             likes={this.state.likes}
@@ -101,31 +96,28 @@ class RecipePage extends React.Component {
                         />
                     </div>
                 </div>
-                <MeasurementList
+                <Instructions
                     const food={this.state.ingredients}
                     const amount={this.state.measurements}
+                    const instructions = {this.state.instructions}
+                    const sourceURL = {this.state.sourceURL}
+                    const id = {this.state.id}
                 />
-
-                <p>{this.state.instructions}</p>
-                <p>Original recipe from: {this.state.sourceURL}</p>
             </div >
         )
     };
 
     _handleLike = () => {
-        // let likeCounter = { this.state.likes };
         this.setState({
             likes: this.state.likes + 1
         })
-    }
+    };
 
     _handleUnlike = () => {
         this.setState({
             unlikes: this.state.unlikes - 1
         })
-    }
-
-    _DislikeButton
+    };
 };
 
 

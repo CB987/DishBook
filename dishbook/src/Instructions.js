@@ -1,10 +1,11 @@
 import React from 'react';
 
-const MeasurementList = (props) => {
+const Instructions = (props) => {
     const ingredient = props.food;
     const measurement = props.amount;
-    console.log(props);
-    console.log(measurement);
+    const instruction = props.instructions;
+    const URL = props.sourceURL;
+
     const ingredientList = ingredient.map(ingredient => {
         if (ingredient !== "") {
             return (
@@ -12,6 +13,7 @@ const MeasurementList = (props) => {
             )
         }
     })
+
     const amountList = measurement.map(measurement => {
         if (measurement !== '') {
             return (
@@ -19,6 +21,7 @@ const MeasurementList = (props) => {
             )
         }
     })
+
     return (
         <div className="ingredients-container">
             <ul>
@@ -27,8 +30,10 @@ const MeasurementList = (props) => {
             <ul>
                 {ingredientList}
             </ul>
+            <p>{instruction}</p>
+            <p>Original recipe from: {URL}</p>
         </div>
     )
 };
 
-export default MeasurementList;
+export default Instructions;

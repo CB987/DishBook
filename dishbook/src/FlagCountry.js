@@ -9,10 +9,8 @@ const FlagCountry = (props) =>{
         const theCountry = country.country;
         const theFlag = country.flag;
         const theNationality = country.nationality;
-        const recipeList = country.recipe;
+        // const recipeList = country.recipe;
 
-
-    
         return(
             <Link to = {`/${theNationality}`}>
                 <img className = "flagImages" alt = {theCountry} src = {theFlag}/>
@@ -22,9 +20,9 @@ const FlagCountry = (props) =>{
 
 
     return(
-            <div className = "countryImages">
-                {theListOfCountry}
-            </div>
+        <div className = "countryImages">
+            {theListOfCountry}
+        </div>
     );
 }
 
