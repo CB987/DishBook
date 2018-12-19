@@ -3,9 +3,10 @@ import {
     BrowserRouter as Router,
     Route
 } from 'react-router-dom';
+
 import FlagCountry from './FlagCountry';
 import ListOfRecipes from './ListOfRecipes';
-// import RecipePage from './RecipePage';
+import RecipePage from './RecipePage';
 
 import Canada from './images/canada-country.png';
 import China from './images/china-country.png';
@@ -112,15 +113,22 @@ class YumWorld extends Component {
                             <FlagCountry 
                                 countryFlags = {this.state.countries}
                                 {...props}
-                            />
-                        )
+                        />)
+                    }} />       
+                    <Route path="/:country" exact render={(props) => {
+                        return (
+                            <ListOfRecipes 
+                                nationality={this.state.countries} 
+                                {...props}
+                        />)
                     }} />
-                    <Route path="/:country" render={(props) => {
-                        return (<ListOfRecipes nationality={this.state.countries} {...props} />)
-                    }}
-                    />
-
-                    {/* <RecipePage />    */}
+                    <Route path = "/:country/:dish/:id" exact render = {(props) =>{
+                        return(
+                            <RecipePage 
+                                recipes = {this.state.recipe}
+                                {...props}
+                        />)
+                    }} />
                 </div>
             </Router>
         );
