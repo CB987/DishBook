@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 class ListOfRecipes extends Component {
@@ -33,13 +33,14 @@ class ListOfRecipes extends Component {
             )
         })
 
-        return(
+        return (
             <div>
-               <h1>I am a recipe</h1>
-               <h1>{listOfRecipes}</h1>
+                <h1>{this.props.match.params.country} food, great choice!</h1>
+                <h4>Select one of these mouthwatering dishes!</h4>
+                <h1>{listOfRecipes}</h1>
             </div>
         )
-    } 
+    }
 }
 
 export default ListOfRecipes;
