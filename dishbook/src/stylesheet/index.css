@@ -17,6 +17,8 @@ body {
     font-family: 'Hind', sans-serif;
     background: rgb(248, 246, 236);
     font-family: 'Paytone One', sans-serif;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #752513;
     }
 
 li {
@@ -27,11 +29,6 @@ li {
 =================*/
 h1 {
     font-size: 30px;
-}
-
-.country-images {
-    /* display: flex; */
-    /* outline: 1px solid yellow; */
 }
 
 figure {
