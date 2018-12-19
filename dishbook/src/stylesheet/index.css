@@ -22,23 +22,11 @@ body {
 li {
     list-style: none;
 }
-
-
-
 /*=================
 == FLAG PAGE
 =================*/
 h1 {
-    color: #752513;
     font-size: 30px;
-}
-
-h2 {
-    color: #752513;
-}
-
-h4 {
-    color: #752513;
 }
 
 .country-images {
@@ -70,13 +58,16 @@ figcaption{
 /*=================
 == RECIPE LIST
 =================*/
+.foodImages {
+    width: 200px;
+    height: 200px;
+}
 
 /*=================
 == RECIPE PAGE
 =================*/
-/* .ingredients-container {
+.ingredients-container {
     display: flex;
-    outline: 1px solid green;
 }
 
 .recipe-header {
@@ -85,7 +76,7 @@ figcaption{
 
 .recipe-header img {
     width: 150px;
-    height: auto;
+    margin: 5px;
 }
 
 .title-likes {
@@ -93,11 +84,18 @@ figcaption{
     outline: 1px solid blue;
 } */
 
-/* .foodImages {
-    width: 200px;
-    height: 200px;
-} */
+.ingredients-container {
+    display: flex;
+    /* outline: 1px solid green; */
+}
 
+.ingredients-list {
+    padding-left: 15px;
+}
+
+.full-recipe-text {
+    padding-left: 10px;
+}
 
 /* ============ */
 /* Flag Page */
