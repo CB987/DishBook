@@ -23,16 +23,22 @@ const Instructions = (props) => {
     })
 
     return (
-        <div className="ingredients-container">
-            <ul>
-                {amountList}
-            </ul>
-            <ul>
-                {ingredientList}
-            </ul>
+        <div className="full-recipe-text">
+            <h3>Ingredients</h3>
+            <div className="ingredients-container">
+                <ul className="ingredients-list">
+                    {amountList}
+                </ul>
+                <ul className="ingredients-list">
+                    {ingredientList}
+                </ul>
+            </div>
+            <br></br>
+            <h3>Instructions</h3>
             <p>{instruction}</p>
+            <br></br>
             <p>Original recipe from: {URL}</p>
-        </div>
+        </div >
     )
 };
 
