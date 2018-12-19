@@ -3,9 +3,9 @@ import React from 'react';
 const Counters = (props) => {
     return (
         <div>
-            <button onClick={() => { props._LikeMe() }}>likes:{props.likes}</button>
+            <button className="button1" onClick={() => { props._LikeMe() }}>Likes: {props.likes}</button>
 
-            <button onClick={() => { props._DislikeMe() }}>dislikes:{props.unlikes}</button>
+            <button className="button2" onClick={() => { props._DislikeMe() }}>Dislikes: {props.unlikes}</button>
 
         </div>
 

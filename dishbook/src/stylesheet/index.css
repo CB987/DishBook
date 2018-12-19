@@ -8,6 +8,7 @@ font-family: 'Hind', sans-serif; */
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    outline: none;
 
 }
 
@@ -71,12 +72,12 @@ figcaption{
 
 .recipe-header img {
     width: 150px;
-    margin: 5px;
+    margin: 15px;
 }
 
 .title-likes {
     padding-left: 5px;
-    outline: 1px solid blue;
+    /* outline: 1px solid blue; */
 } */
 
 .ingredients-container {
@@ -85,11 +86,11 @@ figcaption{
 }
 
 .ingredients-list {
-    padding-left: 15px;
+    margin-left: 15px;
 }
 
 .full-recipe-text {
-    padding-left: 10px;
+    margin-left: 15px;
 }
 
 /* ============ */
@@ -211,12 +212,37 @@ figcaption{
 /* =============== */
 
 .recipe-header {
-    outline: 1px solid red;
+    margin-top: 20px;
+    /* outline: 1px solid red; */
 }
 
 .instructions {
     width: 50%;
     margin-left: 15px;
+}
+
+.button1 {
+    margin: 10px;
+}
+.button1, .button2 {
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    color: rgba(117, 37, 19, .9);
+    background-color: rgb(248, 246, 236);
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, .7);
+    transform: scale(1);
+    transition: box-shadow .2s ease-in-out .1s, color .2s ease-in-out .1s, transform .2s ease-in-out .1s;
+}
+
+.button1:hover {
+    transform: scale(1.05);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, .7)
+}
+
+.button2:hover {
+    transform: scale(1.05);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, .7);
 }
 
 .website-link {
