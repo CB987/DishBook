@@ -22,9 +22,9 @@ import UnitedStates from './images/UnitedStates.jpg';
 
 
 class YumWorld extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
-        this.state ={
+        this.state = {
             countries: [
                 {
                     country: 'Canada',
@@ -107,24 +107,23 @@ class YumWorld extends Component {
         return (
             <Router>
                 <div>
-                    <h1>Welcome</h1>
-                    <h2>Pick Now</h2>
-                    <Route path = "/" exact render = {(props) =>{
-                        return(
-                            <FlagCountry 
-                                countryFlags = {this.state.countries}
+
+                    <Route path="/" exact render={(props) => {
+                        return (
+                            <FlagCountry
+                                countryFlags={this.state.countries}
                                 {...props}
                             />
                         )
-                    }} />       
+                    }} />
                     <Route path="/:country" render={(props) => {
-                        return (<ListOfRecipes nationality={this.state.countries} {...props}/>)
+                        return (<ListOfRecipes nationality={this.state.countries} {...props} />)
                     }}
                     />
-                
+
                     {/* <RecipePage />    */}
                 </div>
-            </Router> 
+            </Router>
         );
     }
 }

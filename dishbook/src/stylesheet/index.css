@@ -1,13 +1,49 @@
-li {
-    list-style: none;
+html {
+    box-sizing: border-box;
 }
-.flagImages{
-    width: 200px;
-    height: 200px;
+*, *:before, *:after {
+    box-sizing: inherit;
 }
 
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+/*=================
+== FLAG PAGE
+=================*/
+.country-images {
+    display: flex;
+    outline: 1px solid yellow;
+}
+
+.flagImages {
+    width: 150px;
+    height: 150px;
+    outline: 1px solid red;
+}
+
+figcaption{
+    text-decoration-style: none;
+    font-size: 10px;
+    display: inline-block;
+    outline: 1px solid orange;
+}
+
+/*=================
+== RECIPE LIST
+=================*/
+
+/*=================
+== RECIPE PAGE
+=================*/
 .ingredients-container {
     display: flex;
+    outline: 1px solid green;
 }
 
 .recipe-header {
@@ -27,4 +63,8 @@ li {
 .foodImages {
     width: 200px;
     height: 200px;
+}
+
+li {
+    list-style: none;
 }
