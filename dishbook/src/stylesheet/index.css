@@ -15,18 +15,9 @@ body {
     width: 100%;
     height: 100%;
     font-family: 'Hind', sans-serif;
-}
-
-html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
     background: rgb(248, 246, 236);
-    color: #752513;
-    /* font-family: 'Paytone One', sans-serif; */
-    /* font-family: 'Source Sans Pro', sans-serif; */
-}
+    font-family: 'Paytone One', sans-serif;
+    }
 
 li {
     list-style: none;
@@ -50,8 +41,8 @@ figure {
 }
 
 .flagImages {
-    width: auto;
-    height: 150px;
+    /* width: auto;
+    height: 150px; */
     /* outline: 1px solid red; */
     /* display: inline-block; */
 }
@@ -75,6 +66,10 @@ figcaption{
 /*=================
 == RECIPE PAGE
 =================*/
+.ingredients-container {
+    display: flex;
+}
+
 .recipe-header {
     display: flex;
 }
@@ -82,13 +77,12 @@ figcaption{
 .recipe-header img {
     width: 150px;
     margin: 5px;
-    /* height: auto; */
 }
 
 .title-likes {
     padding-left: 5px;
-    /* outline: 1px solid blue; */
-}
+    outline: 1px solid blue;
+} */
 
 .ingredients-container {
     display: flex;
@@ -103,15 +97,16 @@ figcaption{
     padding-left: 10px;
 }
 
-/* =========================== */
+/* ============ */
 /* Flag Page */
-/* =========================== */
+/* ============ */
 /* Start of styles april */
 .countryImages {
     display: flex;
     flex-direction: column;
     width: 100%;
-    height: 100%;
+    height:100%;
+    /* outline: 50px solid red; */
 }
 
 .country-title-container {
@@ -120,11 +115,6 @@ figcaption{
     padding: 30px;
     text-align: center;
 }
-
-/* .country-title-container h1,
-.country-title-container h2 {
-    margin: auto;
-} */
 
 .country-title-container h1 {
     padding-bottom: 30px;
@@ -148,7 +138,7 @@ figcaption{
     justify-content: center;
     align-items: center;
     /* outline: 3px solid green; */
-    margin-bottom: 50px;
+    margin-bottom: 100px;
     padding: 10px 20px; 
 }
 
@@ -167,5 +157,56 @@ figcaption{
     min-width: 140px;
     max-height: 140px;
     max-width: 140px;
+}
+
+/* ============ */
+/* Recipe Page */
+/* ============ */
+
+.food-images {
+    min-height: 140px;
+    min-width: 140px;
+    max-height: 140px;
+    max-width: 140px;
+}
+
+.recipeImages {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height:100%;
+}
+
+.recipe-title-container {
+    margin: 40px auto 30px auto;
+    padding: 30px;
+    text-align: center;
+}
+
+.recipe-title-container {
+    /* outline: 1px solid blue; */
+    margin: 40px auto 30px auto;
+    padding: 30px;
+    text-align: center;
+}
+
+.recipe-title-container h1 {
+    padding-bottom: 30px;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 4.3rem;
+    letter-spacing: 7px;
+}
+
+.recipe-image-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 53%;
+    height: 100%;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    /* outline: 3px solid green; */
+    margin-bottom: 100px;
+    padding: 10px 20px; 
 }
 
