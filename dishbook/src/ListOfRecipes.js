@@ -16,16 +16,16 @@ class ListOfRecipes extends Component {
             .then(recipe => {
                 this.setState({
                     recipes: recipe.meals
-            });
-        })
+                });
+            })
     }
 
     render() {
         const countryName = this.props.match.params.country;
         const listOfRecipes = this.state.recipes.map(recipe => {
             const id = recipe.idMeal;
+          
             return( 
-        
                     <Link to = {`/${countryName}/${recipe.strMeal}/${id}`}>
                     <div className="images">
                         <figure>
