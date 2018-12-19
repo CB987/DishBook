@@ -10,28 +10,47 @@ html, body {
     padding: 0;
     height: 100%;
     width: 100%;
-    font-family: 'Source Sans Pro', sans-serif;
+    background: rgb(248, 246, 236);
+    font-family: 'Paytone One', sans-serif;
+    /* font-family: 'Source Sans Pro', sans-serif; */
 }
 
 /*=================
 == FLAG PAGE
 =================*/
+h1 {
+    color: #752513;
+    font-size: 30px;
+}
+
+h4 {
+    color: #752513;
+}
+
 .country-images {
-    display: flex;
+    /* display: flex; */
     outline: 1px solid yellow;
 }
 
-.flagImages {
+figure {
+    outline: 1px solid green;
+    text-align: center;
     width: 150px;
+}
+
+.flagImages {
+    width: auto;
     height: 150px;
     outline: 1px solid red;
+    /* display: inline-block; */
 }
 
 figcaption{
-    text-decoration-style: none;
-    font-size: 10px;
+    /* text-decoration-style: none; */
+    font-size: 15px;
     display: inline-block;
     outline: 1px solid orange;
+    color: #752513;
 }
 
 /*=================
