@@ -45,6 +45,50 @@ figcaption{
     color: #752513;
 }
 
+<<<<<<< HEAD
+/*=================
+== RECIPE LIST
+=================*/
+.foodImages {
+    width: 200px;
+    height: 200px;
+}
+
+/*=================
+== RECIPE PAGE
+=================*/
+.ingredients-container {
+    display: flex;
+}
+
+.recipe-header {
+    display: flex;
+}
+
+.recipe-header img {
+    width: 150px;
+    margin: 15px;
+}
+
+.title-likes {
+    padding-left: 5px;
+    /* outline: 1px solid blue; */
+} 
+
+.ingredients-list {
+    margin-left: 15px;
+}
+
+.full-recipe-text {
+    margin-left: 15px;
+}
+
+/* ============ */
+/* Flag Page */
+/* ============ */
+/* Start of styles april */
+=======
+>>>>>>> 902da43c751e9bda54e496e35eb681f9b18cddde
 .countryImages {
     display: flex;
     flex-direction: column;
@@ -222,7 +266,9 @@ figcaption{
     margin-left: 15px;
 }
 
-.website-link a {
+.website-link a ,
+.random-dish a {
     color: rgba(117, 37, 19, .9);
     text-decoration: none;
+    border-bottom: green;
 }

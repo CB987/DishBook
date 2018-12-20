@@ -21,6 +21,16 @@ const Instructions = (props) => {
             )
         }
     })
+    
+    const theURL = (URL) =>{
+        if(URL !== ""){
+            return(
+                <p className="website-link">Original recipe from: <a href={URL} target="blank">{URL}</a></p>
+            )
+        }else{
+            console.log('url not there');
+        }
+    }
 
 
 
@@ -39,7 +49,7 @@ const Instructions = (props) => {
             <h3>Instructions</h3>
             <p className="instructions">{instruction}</p>
             <br></br>
-            <p className="website-link">Original recipe from: <a href={URL} target="blank">{URL}</a></p>
+            {theURL(URL)}
         </div >
     )
 };
