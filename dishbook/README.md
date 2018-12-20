@@ -21,7 +21,6 @@
 <ul>
     <li>Users have the ability to leave comments on the recipe card.</li>
     <li>Have "related recipes" featured at the bottom of the recipe card.</li>
-    <li>Have a "get a random recipe" option on the front page.</li>
 </ul>
 
 Crafted with care by Steven Kim, April Copes, and Clare Barton.
