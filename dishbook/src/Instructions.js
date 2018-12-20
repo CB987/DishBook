@@ -21,18 +21,18 @@ const Instructions = (props) => {
             )
         }
     })
-    
+
+
     const theURL = (URL) =>{
         if(URL !== ""){
             return(
-                <p className="website-link">Original recipe from: <a href={URL} target="blank">{URL}</a></p>
+                <p className="website-link">Original recipe from: <a href={URL} target="_blank">{URL}</a></p>
             )
         }else{
             console.log('url not there');
         }
     }
-
-
+  
 
     return (
         <div className="full-recipe-text">
@@ -49,7 +49,7 @@ const Instructions = (props) => {
             <h3>Instructions</h3>
             <p className="instructions">{instruction}</p>
             <br></br>
-            {theURL(URL)}
+            <p className="website-link">Original recipe from: <a href={URL} target="blank">{URL}</a></p>
         </div >
     )
 };
