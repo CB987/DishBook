@@ -5,7 +5,7 @@ const Instructions = (props) => {
     const measurement = props.amount;
     const instruction = props.instructions;
     const URL = props.sourceURL;
-    
+
     const ingredientList = ingredient.map(ingredient => {
         if (ingredient !== "") {
             return (
@@ -21,6 +21,8 @@ const Instructions = (props) => {
             )
         }
     })
+
+
 
     return (
         <div className="full-recipe-text">
