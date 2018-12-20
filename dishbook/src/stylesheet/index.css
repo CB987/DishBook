@@ -12,6 +12,7 @@ font-family: 'Hind', sans-serif; */
 
 }
 
+
 a {
     text-decoration: none;
 }
@@ -27,6 +28,7 @@ body {
 li {
     list-style: none;
 }
+
 /*=================
 == FLAG PAGE
 =================*/
@@ -48,9 +50,6 @@ figcaption{
     color: #752513;
 }
 
-/*=================
-== RECIPE LIST
-=================*/
 .foodImages {
     width: 200px;
     height: 200px;
@@ -75,12 +74,7 @@ figcaption{
 .title-likes {
     padding-left: 5px;
     /* outline: 1px solid blue; */
-} */
-
-.ingredients-container {
-    display: flex;
-    /* outline: 1px solid green; */
-}
+} 
 
 .ingredients-list {
     margin-left: 15px;
@@ -94,6 +88,7 @@ figcaption{
 /* Flag Page */
 /* ============ */
 /* Start of styles april */
+=======
 .countryImages {
     display: flex;
     flex-direction: column;
@@ -204,9 +199,34 @@ figcaption{
 }
 
 
-/* =============== */
-/* Ingrediant Page */
-/* =============== */
+/* ================ */
+/* INGREDIENT PAGE */
+/* ================ */
+.ingredients-container {
+    display: flex;
+}
+
+.recipe-header {
+    display: flex;
+}
+
+.recipe-header img {
+    width: 150px;
+    margin: 15px;
+}
+
+.title-likes {
+    padding-left: 5px;
+    /* outline: 1px solid blue; */
+} */
+
+.ingredients-list {
+    margin-left: 15px;
+}
+
+.full-recipe-text {
+    margin-left: 15px;
+}
 
 .recipe-header {
     margin-top: 20px;
@@ -242,12 +262,34 @@ figcaption{
     box-shadow: 2px 2px 2px rgba(0, 0, 0, .7);
 }
 
+.where-to-eat {
+    margin-bottom: 22px;
+}
+
 .website-link {
+    font-size: 22px;
+}
+
+.website-link,
+.website-link a {
+    color: #752513;
+    text-decoration: none;
+}
+
+.website-link a {
     margin-left: 15px;
 }
 
-.website-link a ,
-.random-dish a {
-    color: rgba(117, 37, 19, .9);
-    text-decoration: none;
+.website-link-url {
+    font-size: 18px;
+    
 }
+.website-link-url a {
+    text-decoration: none;
+    color: #752513;
+}
+
+
+
+
+
