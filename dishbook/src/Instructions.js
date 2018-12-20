@@ -49,7 +49,7 @@ const Instructions = (props) => {
             <h3>Instructions</h3>
             <p className="instructions">{instruction}</p>
             <br></br>
-            <p className="website-link">Original recipe from: <a href={URL} target="blank">{URL}</a></p>
+            <p className="website-link-url">Original recipe from: <a href={URL} target="blank">{URL}</a></p>
         </div >
     )
 };

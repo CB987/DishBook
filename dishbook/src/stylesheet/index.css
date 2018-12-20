@@ -276,9 +276,19 @@ figcaption{
 }
 
 .website-link a {
-    
     margin-left: 15px;
 }
+
+.website-link-url {
+    font-size: 18px;
+    
+}
+.website-link-url a {
+    text-decoration: none;
+    color: #752513;
+}
+
+
 
 
 
