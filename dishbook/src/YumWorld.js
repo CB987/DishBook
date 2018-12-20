@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import {
     BrowserRouter as Router,
-    Route
+    Route,
+    Link
 } from 'react-router-dom';
 
 import FlagCountry from './FlagCountry';
 import ListOfRecipes from './ListOfRecipes';
 import RecipePage from './RecipePage';
+import Random from './Random';
 
 import Canada from './images/canada-country.png';
 import China from './images/china-country.png';
@@ -100,9 +102,69 @@ class YumWorld extends Component {
                     nationality: 'American'
                 }
             ]
-
         }
     }
+
+    // componentDidMount() {
+    //     fetch(`https://www.themealdb.com/api/json/v1/1/random.php`)
+    //         .then(results => {
+    //             return results.json();
+    //         })
+    //         .then(data => {
+    //             console.log(data)
+    //             this.setState({
+    //                 id: data.meals[0].idMeal,
+    //                 recipeImage: data.meals[0].strMealThumb,
+    //                 recipeTitle: data.meals[0].strMeal,
+    //                 ingredients: [
+    //                     data.meals[0].strIngredient1,
+    //                     data.meals[0].strIngredient2,
+    //                     data.meals[0].strIngredient3,
+    //                     data.meals[0].strIngredient4,
+    //                     data.meals[0].strIngredient5,
+    //                     data.meals[0].strIngredient6,
+    //                     data.meals[0].strIngredient7,
+    //                     data.meals[0].strIngredient8,
+    //                     data.meals[0].strIngredient9,
+    //                     data.meals[0].strIngredient10,
+    //                     data.meals[0].strIngredient11,
+    //                     data.meals[0].strIngredient12,
+    //                     data.meals[0].strIngredient13,
+    //                     data.meals[0].strIngredient14,
+    //                     data.meals[0].strIngredient15,
+    //                     data.meals[0].strIngredient16,
+    //                     data.meals[0].strIngredient17,
+    //                     data.meals[0].strIngredient18,
+    //                     data.meals[0].strIngredient19,
+    //                     data.meals[0].strIngredient20,
+    //                 ],
+    //                 measurements: [
+    //                     data.meals[0].strMeasure1,
+    //                     data.meals[0].strMeasure2,
+    //                     data.meals[0].strMeasure3,
+    //                     data.meals[0].strMeasure4,
+    //                     data.meals[0].strMeasure5,
+    //                     data.meals[0].strMeasure6,
+    //                     data.meals[0].strMeasure7,
+    //                     data.meals[0].strMeasure8,
+    //                     data.meals[0].strMeasure9,
+    //                     data.meals[0].strMeasure10,
+    //                     data.meals[0].strMeasure11,
+    //                     data.meals[0].strMeasure12,
+    //                     data.meals[0].strMeasure13,
+    //                     data.meals[0].strMeasure14,
+    //                     data.meals[0].strMeasure15,
+    //                     data.meals[0].strMeasure16,
+    //                     data.meals[0].strMeasure17,
+    //                     data.meals[0].strMeasure18,
+    //                     data.meals[0].strMeasure19,
+    //                     data.meals[0].strMeasure20,
+    //                 ],
+    //                 instructions: data.meals[0].strInstructions,
+    //                 sourceURL: data.meals[0].strSource
+    //             })
+    //         })
+    // };
 
     render() {
         return (
@@ -110,10 +172,13 @@ class YumWorld extends Component {
                 <div>
                     <Route path="/" exact render={(props) => {
                         return (
+                            <div>
+                            <Link to={`/random/dish`}>Random Dish</Link>
                             <FlagCountry
                                 countryFlags={this.state.countries}
                                 {...props}
-                            />)
+                                />
+                            </div>)
                     }} />
                     <Route path="/:country" exact render={(props) => {
                         return (
@@ -129,7 +194,14 @@ class YumWorld extends Component {
                                 {...props}
                             />)
                     }} />
-                    {/* <Route path="/:country/:dish */}
+                    <Route path="/random/dish" exact render={(props) => {
+                        return (
+                            <Random
+                                recipes={this.state.recipe}
+                                nationality={this.state.countries}
+                                {...props}    
+                            />)
+                    }} /> 
                 </div>
             </Router>
         );

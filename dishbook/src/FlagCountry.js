@@ -9,12 +9,10 @@ const FlagCountry = (props) => {
         const theCountry = country.country;
         const theFlag = country.flag;
         const theNationality = country.nationality;
-        // const recipeList = country.recipe;
 
         return (
             <Link to={`/${theNationality}`}>
                 <div className="images">
-                    {/* <img className = "flagImages" alt = {theCountry} src = {theFlag}/> */}
                     <figure>
                         <img className="flagImages" alt={theCountry} src={theFlag} />
                         <figcaption>
