@@ -242,7 +242,9 @@ figcaption{
     margin-left: 15px;
 }
 
-.website-link a {
+.website-link a ,
+.random-dish a {
     color: rgba(117, 37, 19, .9);
     text-decoration: none;
+    border-bottom: green;
 }

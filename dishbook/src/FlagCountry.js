@@ -29,6 +29,7 @@ const FlagCountry = (props) => {
             <div className="country-title-container">
                 <h1>Welcome to Dishbook!</h1>
                 <h2>Where would you like to eat?</h2>
+                <Link to={`/random/dish`}><p className="random-dish" ><a href="#" >Random Dish</a></p></Link>
             </div>
             <div className="country-image-container">
                 {theListOfCountry}
