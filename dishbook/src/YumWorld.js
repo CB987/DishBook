@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import {
     BrowserRouter as Router,
-    Route
+    Route,
+    Link
 } from 'react-router-dom';
 
 import FlagCountry from './FlagCountry';
 import ListOfRecipes from './ListOfRecipes';
 import RecipePage from './RecipePage';
+import Random from './Random';
 
 import Canada from './images/canada-country.png';
 import China from './images/china-country.png';
@@ -100,7 +102,6 @@ class YumWorld extends Component {
                     nationality: 'American'
                 }
             ]
-
         }
     }
 
@@ -110,10 +111,12 @@ class YumWorld extends Component {
                 <div>
                     <Route path="/" exact render={(props) => {
                         return (
+                            <div>
                             <FlagCountry
                                 countryFlags={this.state.countries}
                                 {...props}
-                            />)
+                                />
+                            </div>)
                     }} />
                     <Route path="/:country" exact render={(props) => {
                         return (
@@ -129,7 +132,14 @@ class YumWorld extends Component {
                                 {...props}
                             />)
                     }} />
-                    {/* <Route path="/:country/:dish */}
+                    <Route path="/random/dish" exact render={(props) => {
+                        return (
+                            <Random
+                                recipes={this.state.recipe}
+                                nationality={this.state.countries}
+                                {...props}    
+                            />)
+                    }} /> 
                 </div>
             </Router>
         );

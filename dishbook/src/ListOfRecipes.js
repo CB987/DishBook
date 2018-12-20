@@ -16,8 +16,8 @@ class ListOfRecipes extends Component {
             .then(recipe => {
                 this.setState({
                     recipes: recipe.meals
-                });
-            })
+            });
+        })
     }
 
     render() {
@@ -27,7 +27,7 @@ class ListOfRecipes extends Component {
           
             return( 
                     <Link to = {`/${countryName}/${recipe.strMeal}/${id}`}>
-                    <div className="images">
+                    <div className="images ">
                         <figure>
                             <img className="food-images" src={recipe.strMealThumb} />
                                 <figcaption>
@@ -39,7 +39,7 @@ class ListOfRecipes extends Component {
     
             )
         })
-
+        
         return (
             <div className="recipeImages">
                 <div className="recipe-title-container">
