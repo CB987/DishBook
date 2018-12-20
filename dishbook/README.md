@@ -7,6 +7,7 @@
     <li>An array of recipes from the chosen country that they can choose from, which routes them to...</li>
     <li>A "recipe card" with an image, the title, and all the ingredients and instructions for the recipe</li>
     <li>The recipe card has like/ dislike buttons for users to react to the recipe.</li>
+    <li>A "Get a random recipe" option on the front page that will pick a dish for the user.</li>
 </ul>
 
 <h3>Technologies</h3>
