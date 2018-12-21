@@ -12,6 +12,11 @@ font-family: 'Hind', sans-serif; */
 
 }
 
+
+a {
+    text-decoration: none;
+}
+
 body {
     width: 100%;
     height: 100%;
@@ -83,6 +88,7 @@ figcaption{
 /* Flag Page */
 /* ============ */
 /* Start of styles april */
+=======
 .countryImages {
     display: flex;
     flex-direction: column;
@@ -256,11 +262,34 @@ figcaption{
     box-shadow: 2px 2px 2px rgba(0, 0, 0, .7);
 }
 
+.where-to-eat {
+    margin-bottom: 22px;
+}
+
 .website-link {
-    margin-left: 15px;
+    font-size: 22px;
+}
+
+.website-link,
+.website-link a {
+    color: #752513;
+    text-decoration: none;
 }
 
 .website-link a {
-    color: rgba(117, 37, 19, .9);
-    text-decoration: none;
+    margin-left: 15px;
 }
+
+.website-link-url {
+    font-size: 18px;
+    
+}
+.website-link-url a {
+    text-decoration: none;
+    color: #752513;
+}
+
+
+
+
+

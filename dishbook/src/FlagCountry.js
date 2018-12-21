@@ -9,12 +9,10 @@ const FlagCountry = (props) => {
         const theCountry = country.country;
         const theFlag = country.flag;
         const theNationality = country.nationality;
-        // const recipeList = country.recipe;
 
         return (
             <Link to={`/${theNationality}`}>
                 <div className="images">
-                    {/* <img className = "flagImages" alt = {theCountry} src = {theFlag}/> */}
                     <figure>
                         <img className="flagImages" alt={theCountry} src={theFlag} />
                         <figcaption>
@@ -30,7 +28,8 @@ const FlagCountry = (props) => {
         <div className="countryImages">
             <div className="country-title-container">
                 <h1>Welcome to Dishbook!</h1>
-                <h2>Where would you like to eat?</h2>
+                <h2 className="where-to-eat">Where would you like to eat?</h2>
+                <Link className="website-link" to={`/random/dish`}>Can't decide? Let us pick one for you!</Link>
             </div>
             <div className="country-image-container">
                 {theListOfCountry}
